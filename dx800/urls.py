@@ -29,7 +29,4 @@ urlpatterns = [
 
     
     path('dept/', views.dept , name='dept'),
-
-    
-    
 ]

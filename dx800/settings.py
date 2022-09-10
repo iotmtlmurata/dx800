@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dx800_app',
+    'dx800_app.apps.Dx800AppConfig',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     
 ]
@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Bangkok'
 
 USE_I18N = True
 
