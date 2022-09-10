@@ -26,7 +26,4 @@ urlpatterns = [
     # url(r'^x_chart/<param_1>', views.x_chart , name='x_chart'),
     path('x_chart/', views.x_chart , name='x_chart'),
     path('dept/', views.dept , name='dept'),
-
-    
-    
 ]
