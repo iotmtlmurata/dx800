@@ -1,9 +1,11 @@
 from multiprocessing import context
 from re import template
 from urllib import request
-from django.shortcuts import render
+from django.urls import reverse
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import loader
+from django.views import generic
 
 from plotly.offline import plot
 from plotly.graph_objs import Scatter
@@ -33,6 +35,11 @@ def dept(request):
     context = {'var1' : header_str, 'content' : 'dept.html', 'list_dept' : list_dept}
     # return HttpResponse(template.render(context,request))
     return render(request, 'dept.html', context)
+
+def defective(request):
+    template = loader.get_template('index.html')
+    context = {'content' : 'defective.html'}
+    return HttpResponse(template.render(context,request))
 
 def x_chart(request):
 

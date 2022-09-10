@@ -20,10 +20,12 @@ from django.urls import re_path as url
 
 
 urlpatterns = [
-    path('', views.dept),
+    path('', views.dept, name='dept'),
     path('admin/', admin.site.urls),
     path('index/', views.index , name='index'),
     path('blank/', views.blank , name='blank'),
+    path('defective/', views.defective , name='defective'),
     path('x_chart/', views.x_chart , name='x_chart'),
     path('spc_chart/', views.spc_chart , name='spc_chart'),
+    
 ]
