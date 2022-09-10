@@ -103,13 +103,13 @@
       </li>
 
       <li class="side-nav-item">
-        <a href="{% url 'index' %}" class="side-nav-link">
+        <a href="{% url 'dept' %}" class="side-nav-link">
           <i class="uil-calender"></i>
           <span> Home </span>
         </a>
       </li>
 
-      <li class="side-nav-item">
+      {% comment %} <li class="side-nav-item">
         <a href="{% url 'dept' %}" class="side-nav-link">
           <i class="uil-calender"></i>
           <span> Department </span>
@@ -121,17 +121,17 @@
           <i class="uil-calender"></i>
           <span> X Chart </span>
         </a>
-      </li>
+      </li> {% endcomment %}
 
       <!-- Defective -->
       <li class="side-nav-item">
-        <a data-bs-toggle="sidebarEcommerce_Defective" href="#sidebarEcommerce_Defective"
-           aria-expanded="true" aria-controls="sidebarEcommerce_Defective" class="side-nav-link">
+        <a class="side-nav-link" data-bs-toggle="collapse" href="#sidebar-defective"
+           aria-expanded="false" aria-controls="sidebar-defective" role="button">
           <i class="uil-store"></i>
-          <span> Defective </span>
+          <span>Defective</span>
           <span class="menu-arrow"></span>
         </a>
-        <div class="collapse show" id="sidebarEcommerce_Defective">
+        <div class="collapse" id="sidebar-defective">
           <ul class="side-nav-second-level">
             <li>
               <a href="{% url 'defective' %}" class="side-nav-link">
@@ -153,24 +153,24 @@
 
       <!-- Realtime -->
       <li class="side-nav-item">
-        <a data-bs-toggle="sidebarEcommerce_Realtime" href="#sidebarEcommerce_Realtime"
-            aria-expanded="true" aria-controls="sidebarEcommerce_Realtime" class="side-nav-link">
+        <a class="side-nav-link" data-bs-toggle="collapse" href="#sidebar-realtime"
+            aria-expanded="false" aria-controls="sidebar-realtime" role="button">
           <i class="uil-store"></i>
-          <span> Realtime </span>
+          <span>Realtime</span>
           <span class="menu-arrow"></span>
         </a>
-        <div class="collapse show" id="sidebarEcommerce_Realtime">
+        <div class="collapse" id="sidebar-realtime">
           <ul class="side-nav-second-level">
             <li>
-              <a href="{% url 'realtime' %}" class="side-nav-link">
+              <a href="{% url 'realtime' %}" class="side-nav-link" role="button">
                 <i class="uil-calender"></i>
                 <span>Product A</span>
               </a>
-              <a href="{% url 'realtime' %}" class="side-nav-link">
+              <a href="{% url 'realtime' %}" class="side-nav-link" role="button">
                 <i class="uil-calender"></i>
                 <span>Product B</span>
               </a>
-              <a href="{% url 'realtime' %}" class="side-nav-link">
+              <a href="{% url 'realtime' %}" class="side-nav-link" role="button">
                 <i class="uil-calender"></i>
                 <span>Product C</span>
               </a>
@@ -179,19 +179,15 @@
         </div>
       </li>
 
+      <!-- SPC -->
       <li class="side-nav-item">
-        <a
-          data-bs-toggle="sidebarEcommerce_SPC"
-          href="#sidebarEcommerce_SPC"
-          aria-expanded="true"
-          aria-controls="sidebarEcommerce_SPC"
-          class="side-nav-link"
-        >
+        <a class="side-nav-link" data-bs-toggle="collapse" href="#sidebar-spc"
+           aria-expanded="false" aria-controls="sidebar-spc" role="button">
           <i class="uil-store"></i>
           <span> SPC </span>
           <span class="menu-arrow"></span>
         </a>
-        <div class="collapse show" id="sidebarEcommerce_SPC">
+        <div class="collapse" id="sidebar-spc">
           <ul class="side-nav-second-level">
             <li>
               <a href="{% url 'spc_chart' %}" class="side-nav-link">
