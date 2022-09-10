@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Starter Page | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="A fully featured admin theme which can be used to build CRM, CMS, etc."
+      name="description"
+    />
+    <meta content="Coderthemes" name="author" />
+    {% include 'lib_css.blade.html' %}
+  </head>
+
+  <body
+    class="loading"
+    data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'
+  >
+    <!-- Begin page -->
+    <div class="wrapper">
+      <!-- ========== Left Sidebar Start ========== -->
+      <!-- @include('lib_sidebar') -->
+      {% include 'lib_sidebar.blade.html' %}
+      <!-- Left Sidebar End -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+      <div class="content-page">
+        <div class="content">
+          <!-- Topbar Start -->
+          <!-- @include('lib_nav') -->
+          {% include 'lib_nav.blade.html' %}
+          <!-- end Topbar -->
+
+          {% if content != "" %} {% include content %} {% else %}
+          <div>...display the non-runing HTML..</div>
+          {% endif %}
+          <!-- Start Content-->
+          <!-- <div class="container-fluid">@yield('content')</div> -->
+        </div>
+        <!-- content -->
+
+        <!-- Footer Start -->
+        {% include 'lib_foot.blade.html' %}
+        <!-- end Footer -->
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- End Page content -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- END wrapper -->
+    <!-- /End-bar -->
+
+    {% include 'lib_js.blade.html' %}
+  </body>
+</html>
