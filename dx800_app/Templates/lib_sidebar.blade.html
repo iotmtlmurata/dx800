@@ -138,12 +138,34 @@
         <div class="collapse show" id="sidebarEcommerce_Defective">
           <ul class="side-nav-second-level">
             <li>
-              <a href="apps-ecommerce-products.html">Products</a>
+              <a href="{% url 'x_chart' %}" class="side-nav-link">
+                <i class="uil-calender"></i>
+                <span> X Chart </span>
+              </a>
             </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="side-nav-item">
+        <a
+          data-bs-toggle="sidebarEcommerce_SPC"
+          href="#sidebarEcommerce_SPC"
+          aria-expanded="true"
+          aria-controls="sidebarEcommerce_SPC"
+          class="side-nav-link"
+        >
+          <i class="uil-store"></i>
+          <span> SPC </span>
+          <span class="menu-arrow"></span>
+        </a>
+        <div class="collapse show" id="sidebarEcommerce_SPC">
+          <ul class="side-nav-second-level">
             <li>
-              <a href="apps-ecommerce-products-details.html"
-                >Products Details</a
-              >
+              <a href="{% url 'spc_chart' %}" class="side-nav-link">
+                <i class="uil-calender"></i>
+                <span> SPC chart </span>
+              </a>
             </li>
           </ul>
         </div>

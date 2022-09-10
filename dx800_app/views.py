@@ -86,3 +86,38 @@ def get_lot():
     # df = df[df['Name'].str.len()==7]
     print(df["Name"].astype(str).tolist())
     return df["Name"].astype(str).tolist()
+
+
+
+def spc_chart(request):
+
+    dbname = get_database()
+    collection_name = dbname["mt800_tkantb"]
+    key_dept = request.GET['key_dept']
+
+    item_details = list(collection_name.find( {"lot_no" : "2207047"} ))
+
+
+    thislist = []
+    for item in item_details:
+        temp = {"x" : item["record_time"], "y" : item["air_pres_lv"]}
+        thislist.append(temp)
+
+    x_data = [0,1,2,3]
+    y_data = [x**2 for x in x_data]
+
+    x_data2 = [0,1,2,3]
+    y_data2 = [x**1 for x in x_data2]
+    plot_div = plot([Scatter(x=x_data, y=y_data,
+                        mode='lines', name='test',
+                        opacity=0.8, marker_color='green'),
+                        Scatter(x=x_data2, y=y_data2,
+                        mode='lines', name='test',
+                        opacity=0.8, marker_color='green')],
+               output_type='div') 
+
+    header_str = 'Hello, dddd'
+    template = loader.get_template('index.html')
+
+    context = {'var1' : header_str, 'content' : 'spc_chart.html', 'plot_div' : plot_div, 'list_of_lot' : get_lot(), 'key_dept' : key_dept}
+    return HttpResponse(template.render(context,request))
