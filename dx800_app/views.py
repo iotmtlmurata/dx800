@@ -41,6 +41,11 @@ def defective(request):
     context = {'content' : 'defective.html'}
     return HttpResponse(template.render(context,request))
 
+def realtime(request):
+    template = loader.get_template('index.html')
+    context = {'content' : 'realtime.html'}
+    return HttpResponse(template.render(context,request))
+
 def x_chart(request):
 
     dbname = get_database()
