@@ -25,6 +25,7 @@ urlpatterns = [
     path('index/', views.index , name='index'),
     path('blank/', views.blank , name='blank'),
     path('defective/', views.defective , name='defective'),
+    path('realtime/', views.realtime , name='realtime'),
     path('x_chart/', views.x_chart , name='x_chart'),
     path('spc_chart/', views.spc_chart , name='spc_chart'),
     

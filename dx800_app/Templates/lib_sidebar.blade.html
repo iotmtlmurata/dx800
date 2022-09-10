@@ -123,14 +123,10 @@
         </a>
       </li>
 
+      <!-- Defective -->
       <li class="side-nav-item">
-        <a
-          data-bs-toggle="sidebarEcommerce_Defective"
-          href="#sidebarEcommerce_Defective"
-          aria-expanded="true"
-          aria-controls="sidebarEcommerce_Defective"
-          class="side-nav-link"
-        >
+        <a data-bs-toggle="sidebarEcommerce_Defective" href="#sidebarEcommerce_Defective"
+           aria-expanded="true" aria-controls="sidebarEcommerce_Defective" class="side-nav-link">
           <i class="uil-store"></i>
           <span> Defective </span>
           <span class="menu-arrow"></span>
@@ -138,9 +134,45 @@
         <div class="collapse show" id="sidebarEcommerce_Defective">
           <ul class="side-nav-second-level">
             <li>
-              <a href="{% url 'x_chart' %}" class="side-nav-link">
+              <a href="{% url 'defective' %}" class="side-nav-link">
                 <i class="uil-calender"></i>
-                <span> X Chart </span>
+                <span>Product A</span>
+              </a>
+              <a href="{% url 'defective' %}" class="side-nav-link">
+                <i class="uil-calender"></i>
+                <span>Product B</span>
+              </a>
+              <a href="{% url 'defective' %}" class="side-nav-link">
+                <i class="uil-calender"></i>
+                <span>Product C</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Realtime -->
+      <li class="side-nav-item">
+        <a data-bs-toggle="sidebarEcommerce_Realtime" href="#sidebarEcommerce_Realtime"
+            aria-expanded="true" aria-controls="sidebarEcommerce_Realtime" class="side-nav-link">
+          <i class="uil-store"></i>
+          <span> Realtime </span>
+          <span class="menu-arrow"></span>
+        </a>
+        <div class="collapse show" id="sidebarEcommerce_Realtime">
+          <ul class="side-nav-second-level">
+            <li>
+              <a href="{% url 'realtime' %}" class="side-nav-link">
+                <i class="uil-calender"></i>
+                <span>Product A</span>
+              </a>
+              <a href="{% url 'realtime' %}" class="side-nav-link">
+                <i class="uil-calender"></i>
+                <span>Product B</span>
+              </a>
+              <a href="{% url 'realtime' %}" class="side-nav-link">
+                <i class="uil-calender"></i>
+                <span>Product C</span>
               </a>
             </li>
           </ul>
