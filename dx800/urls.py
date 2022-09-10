@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index , name='index'),
     path('blank/', views.blank , name='blank'),
-    # url(r'^x_chart/<param_1>', views.x_chart , name='x_chart'),
+    # url(r'^x_chart/(?P<person_id>[0-9]+)$', views.x_chart , name='x_chart'),
     path('x_chart/', views.x_chart , name='x_chart'),
     path('dept/', views.dept , name='dept'),
 

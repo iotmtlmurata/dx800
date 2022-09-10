@@ -38,7 +38,7 @@ def x_chart(request):
 
     dbname = get_database()
     collection_name = dbname["mt800_tkantb"]
-
+    key_dept = request.GET['key_dept']
 
     item_details = list(collection_name.find( {"lot_no" : "2207047"} ))
 
@@ -64,7 +64,7 @@ def x_chart(request):
     header_str = 'Hello, dddd'
     template = loader.get_template('index.html')
 
-    context = {'var1' : header_str, 'content' : 'x_chart.html', 'plot_div' : plot_div, 'list_of_lot' : get_lot()}
+    context = {'var1' : header_str, 'content' : 'x_chart.html', 'plot_div' : plot_div, 'list_of_lot' : get_lot(), 'key_dept' : key_dept}
     return HttpResponse(template.render(context,request))
 
 def get_database():
